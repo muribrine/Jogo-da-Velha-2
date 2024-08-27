@@ -1,0 +1,88 @@
+html {
+    width: 75%;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: white;
+}
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.25rem;
+    text-align: center;
+    font-weight: 800;
+}
+
+.Game_Board {
+
+    display: grid;
+    grid-template-columns: 6.25rem 6.25rem 6.25rem;
+    grid-template-rows: 6.25rem 6.25rem 6.25rem;
+    gap: 1rem;
+
+}
+
+.Game_Board h3 {
+    font-size: 8rem;
+}
+
+.Won {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Sector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Sector_Wrapper {
+
+    display: grid;
+    grid-template-columns: 2rem 2rem 2rem;
+    grid-template-rows: 2rem 2rem 2rem;
+    gap: 0.1rem;
+
+    width: 6.2rem;
+    height: 6.2rem;
+    border-style: solid;
+    border-width: 0px;
+}
+
+.Sector h3 {
+    font-size: 4rem;
+}
+
+.Cell {
+
+    width: 2rem;
+    height: 2rem;
+
+    border-style: solid;
+    border-width: 0px;
+    border-radius: 8px;
+
+    background-color: hsl(210, 25%, 80%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+}
+
+.Inactive { 
+    background-color: hsl(210, 10%, 80%);
+    opacity: 0.5;
+    cursor: default;
+    font-weight: 500;
+}
+
+.Cell:hover {
+    background-color: hsl(210, 30%, 70%);
+}
