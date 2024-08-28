@@ -5,13 +5,17 @@ let current_cell = [undefined, undefined];
 
 let all_free_flag = true;
 let won_flag = false;
+let tie_flag = false;
 
 function game_loop() {
 
     document.getElementById("player_indicator").innerText = `Jogador: ${current_player}`;
     if(won_flag) {
         document.getElementById("player_indicator").innerText = `Venceu!`;
-    }
+    };
+    if(tie_flag) {
+        document.getElementById("player_indicator").innerText = `É um empate!`;
+    };
 
 
     check_for_capture();
@@ -119,6 +123,7 @@ function check_for_capture() {
                 cells[8].innerText != ""
             ) {
                 sector.innerHTML = "<h3>?</h3>";
+                tie_flag = true;
             }
 
         } catch (error) {};
