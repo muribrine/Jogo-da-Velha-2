@@ -239,16 +239,15 @@ function check_for_win() {
     }
 
     if (
-        sectors[0].innerHTML != "" &&
-        sectors[1].innerHTML != "" &&
-        sectors[2].innerHTML != "" &&
-        sectors[3].innerHTML != "" &&
-        sectors[4].innerHTML != "" &&
-        sectors[5].innerHTML != "" &&
-        sectors[6].innerHTML != "" &&
-        sectors[7].innerHTML != "" &&
-        sectors[8].innerHTML != "" &&
-        sectors[0].children[0].attributes.length == 0
+        sectors[0].children[0].attributes.length == 0 &&
+        sectors[1].children[0].attributes.length == 0 &&
+        sectors[2].children[0].attributes.length == 0 &&
+        sectors[3].children[0].attributes.length == 0 &&
+        sectors[4].children[0].attributes.length == 0 &&
+        sectors[5].children[0].attributes.length == 0 &&
+        sectors[6].children[0].attributes.length == 0 &&
+        sectors[7].children[0].attributes.length == 0 &&
+        sectors[8].children[0].attributes.length == 0
     ) {
         invert_player();
         document.getElementById("Game_Board").classList.add("Won");
